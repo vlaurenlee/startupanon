@@ -1,0 +1,49 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="main-container">
+  <div class="fixed top-right-corner">
+      <button type="button" class="btn btn-primary" ng-hide="submit_form" ng-click="submit_form = true">Submit a Story</button>
+  </div>
+
+  <div class="pop-over" ng-show="submit_form">
+      <label class="notification">{{newStory.notification}}</label>
+      <form class="story-form">
+        <label>Submit a new Story</label>
+        <p class="input-group">
+          <label class="notification">{{newStory.notification}}</label>
+          <textarea type="text" class="form-control" placeholder="Add a new thing here." ng-model="newStory"></textarea>
+          <button type="submit" class="btn btn-primary" ng-click="addStory()">Add New</button><button type="button" class="btn btn-primary" ng-click="submit_form = false">Cancel</button>
+        </p>
+      </form>
+  </div>
+
+  <header class="hero-unit" id="banner">
+    <div class="container">
+      <h1>EA</h1>
+      <h4 class="subtitle">The good. The Bad. The Ugly.</h4>
+    </div>
+  </header>
+
+  <div class="stories">
+    <div class="row" ng-repeat="story in active_stories | orderBy:'-submitted'">
+      <div class="story">
+        <p>{{story.body}}</p>
+        <label>{{story.submitted | date}}</label>
+      </div>
+      <!--<div class="controls">
+      <!--<button ng-click="flag(story)">Flag Inappropriate</button>
+      <div class="votes">
+        <button type="button" class="btn btn-primary" ng-click="upvote(story)">Upvote</button>
+        <label>{{story.score}}</label>
+        <button type="button" class="btn btn-primary" ng-click="downvote(story)">Downvote</button>
+      </div>
+    </div>-->
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>EA.org |
+        <a href="https://twitter.com/tyhenkel">@EA</a>
+  </div>
+</footer>

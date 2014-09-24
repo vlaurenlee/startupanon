@@ -1,0 +1,62 @@
+.story-form {
+    margin: 20px 0;
+}
+
+#banner {
+    border-bottom: none;
+    margin-top: -20px;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: none;
+}
+
+.main-container {
+   .stories {
+        position: relative;
+        padding: 30px 15px;
+        width: 70%;
+        min-width: 400px;
+        max-width: 650px;
+        margin: 0 auto;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        background: none;
+        
+        .row {
+            margin-top: 50px;
+            border-bottom: 1px #000 solid;
+        }
+   }
+
+   
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #E5E5E5;
+}
+
+/**
+ * Submission
+ */
+
+div.fixed {
+    position: fixed;
+}
+
+.top-right-corner {
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+}
+
+
+
+

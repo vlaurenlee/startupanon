@@ -1,0 +1,33 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+ <!--<h1>Flagged Stories</h1>
+  <div class="row" ng-repeat="story in flagged_stories track by $index">
+    <div class="story">
+      <p>{{story.body}}</p>
+    </div>
+    <div class="controls">
+    <button ng-click="delete(story)">Delete Story</button>
+    <button ng-click="unflag(story)">Unflag Story</button>
+    <div class="votes">
+      <label>{{story.score}}</label>
+      <label>{{story.status}}</label>
+    </div>
+  </div>
+  </div>-->
+  <h1>Submitted Stories</h1>
+  <div class="row" ng-repeat="story in submitted_stories | orderBy:'-submitted'">
+    <div class="story">
+      <p>{{story.body}}</p>
+      <label>{{story.submitted | date}}</label>
+    </div>
+    <div class="controls">
+    <button ng-click="delete(story)">Delete Story</button>
+    <button ng-click="publish(story)">Publish Story</button>
+    <div class="votes">
+      <label>{{story.score}}</label>
+      <label>{{story.status}}</label>
+    </div>
+  </div>
+  </div>
+</div>
