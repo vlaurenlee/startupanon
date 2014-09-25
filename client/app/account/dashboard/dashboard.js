@@ -6,6 +6,7 @@ angular.module('eaApp')
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'app/account/dashboard/dashboard.html',
-        controller: 'DashboardCtrl'
+        controller: 'DashboardCtrl',
+        authenticate: true
       });
   });

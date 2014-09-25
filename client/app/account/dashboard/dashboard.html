@@ -19,8 +19,10 @@
   <div class="stories">
     <div class="row" ng-repeat="story in submitted_stories | orderBy:'-submitted'">
       <div class="story">
-        <p>{{story.body}}</p>
         <label>{{story.submitted | date}}</label>
+        <p>{{story.body}}</p>
+        <a ng-click="publish(story)">Publish</a>
+        <a ng-click="delete(story)">Delete</a>
       </div>
     </div>
   </div>
