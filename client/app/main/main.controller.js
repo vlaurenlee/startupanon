@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eaApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, $state, socket) {
     $scope.active_stories = [];
 
     $http.get('/api/stories?status=Active').success(function(stories) {
@@ -14,7 +14,12 @@ angular.module('eaApp')
     $scope.launch_form = function(){
       $scope.submit_form = !$scope.submit_form;
     }
-    
+
+    $scope.close_form = function(){
+      $scope.submit_form = false;
+      $state.go('main');
+    }
+
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('story');
     });

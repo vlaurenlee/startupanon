@@ -89,8 +89,7 @@ a {
 
 a:hover, a:visited {
 	text-decoration: none;
-	color: grey;
-	
+
 	.action {
 		color: red;
 	}
@@ -98,6 +97,11 @@ a:hover, a:visited {
 	.cancel {
 		color: grey;
 	}
+}
+
+.right-float {
+    position: relative;
+    float: right;
 }
 // Component styles are injected through grunt
 // injector

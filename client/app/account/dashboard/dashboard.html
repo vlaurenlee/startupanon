@@ -16,16 +16,12 @@
   </div>
   </div>-->
   <h1>Submitted Stories</h1>
-  <div class="row" ng-repeat="story in submitted_stories | orderBy:'-submitted'">
-    <div class="story">
-      <p>{{story.body}}</p>
-      <label>{{story.submitted | date}}</label>
+  <div class="stories">
+    <div class="row" ng-repeat="story in submitted_stories | orderBy:'-submitted'">
+      <div class="story">
+        <p>{{story.body}}</p>
+        <label>{{story.submitted | date}}</label>
+      </div>
     </div>
-    <div class="controls">
-    <a ng-click="publish(story)">Publish</a>
-    <a ng-click="delete(story)">Delete</a>
-    <div class="votes">
-    </div>
-  </div>
   </div>
 </div>
