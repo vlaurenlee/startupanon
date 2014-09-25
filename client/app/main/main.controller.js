@@ -11,35 +11,10 @@ angular.module('eaApp')
 
     $scope.submit_form = false; 
 
-    $scope.addStory = function() {
-      if($scope.newStory === '') {
-        return;
-      }
-      $http.post('/api/stories', { body: $scope.newStory })
-        .success(function(res){
-          console.log('successfully completed');
-          $scope.newStory.notification = "Thanks, your story is getting approved."
-          $scope.submit_form = false;
-          $scope.newStory = '';
-        })
-        .error(function(err){
-          console.log('error in completion');
-          $scope.newStory.notification = "There was an error, please try submitting again."
-        });
-    };
-
-    $scope.flag = function(story) {
-      $http.post('/api/stories/flag/' + story._id);
-    };
-
-    $scope.upvote = function(story) {
-      $http.post('/api/stories/upvote/' + story._id);
-    };
-
-    $scope.downvote = function(story) {
-      $http.post('/api/stories/downvote/' + story._id);
-    };
-
+    $scope.launch_form = function(){
+      $scope.submit_form = !$scope.submit_form;
+    }
+    
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('story');
     });

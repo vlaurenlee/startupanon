@@ -14,6 +14,7 @@
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     background: none;
+    margin-top: 10px;
 }
 
 .main-container {
@@ -26,7 +27,7 @@
         margin: 0 auto;
         text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
         background: none;
-        
+
         .row {
             margin-top: 50px;
             border-bottom: 1px #000 solid;
@@ -55,6 +56,51 @@ div.fixed {
     top: 0px;
     right: 0px;
     padding: 10px;
+}
+
+div.pop-over {
+    top: 0px;
+    z-index: 100;
+    position: fixed;
+    right: 0px;
+    padding: 20px;
+    background: #fff;
+    bottom: 0px;
+    width: 550px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: all, 3s;
+}
+
+form.story-form {
+    textarea {
+        outline: none;
+        margin-top: 17px;
+        padding: 0;
+        height: 396px;
+        border: none;
+        box-shadow: none;
+    }
+    textarea:hover, textarea:active, textarea:focus{
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+    .controls {
+        margin-top: 10px;
+    }
+}
+
+p.fine-print {
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 19px;
+}
+
+.centered {
+    text-align: center;
+    height: 200px;
+    margin-top: 150px;
 }
 
 

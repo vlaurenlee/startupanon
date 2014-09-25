@@ -22,11 +22,9 @@
       <label>{{story.submitted | date}}</label>
     </div>
     <div class="controls">
-    <button ng-click="delete(story)">Delete Story</button>
-    <button ng-click="publish(story)">Publish Story</button>
+    <a ng-click="publish(story)">Publish</a>
+    <a ng-click="delete(story)">Delete</a>
     <div class="votes">
-      <label>{{story.score}}</label>
-      <label>{{story.status}}</label>
     </div>
   </div>
   </div>

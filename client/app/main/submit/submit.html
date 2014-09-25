@@ -1,0 +1,13 @@
+<label class="notification">{{newStory.notification}}</label>
+<form class="story-form">
+  <h3>Submit your Story</h3>
+    <textarea type="text" class="form-control" placeholder="Start writing here..." ng-model="newStory"></textarea>
+    <div id="rules" class="slideable">
+      <h4>Rules of EA.<h4>
+      <p class="fine-print">
+        1. No names.
+      </p>
+      <a class="action" ng-click="addStory()">Got it. Submit.</a>
+      <label class="notification">{{newStory.notification}}</label>
+    </div>
+</form>

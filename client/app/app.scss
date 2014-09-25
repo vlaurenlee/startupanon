@@ -66,6 +66,39 @@ label {
 	color: $foreground-color;
 }
 
+a {
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	line-height: 26px;
+	color: #333;
+	color: $foreground-color;
+
+	.action {
+		color: red;
+	}
+
+	.cancel {
+		color: grey;
+	}
+}
+
+a:hover, a:visited {
+	text-decoration: none;
+	color: grey;
+	
+	.action {
+		color: red;
+	}
+
+	.cancel {
+		color: grey;
+	}
+}
 // Component styles are injected through grunt
 // injector
 @import 'account/dashboard/dashboard.scss';

@@ -1,27 +1,23 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<div class="main-container">
-  <div class="fixed top-right-corner">
-      <button type="button" class="btn btn-primary" ng-hide="submit_form" ng-click="submit_form = true">Submit a Story</button>
-  </div>
-
-  <div class="pop-over" ng-show="submit_form">
-      <label class="notification">{{newStory.notification}}</label>
-      <form class="story-form">
-        <label>Submit a new Story</label>
-        <p class="input-group">
-          <label class="notification">{{newStory.notification}}</label>
-          <textarea type="text" class="form-control" placeholder="Add a new thing here." ng-model="newStory"></textarea>
-          <button type="submit" class="btn btn-primary" ng-click="addStory()">Add New</button><button type="button" class="btn btn-primary" ng-click="submit_form = false">Cancel</button>
-        </p>
-      </form>
-  </div>
+<div class="main-container" ng-class="{ faded: submit_form }">
 
   <header class="hero-unit" id="banner">
     <div class="container">
-      <h1>EA</h1>
-      <h4 class="subtitle">The good. The Bad. The Ugly.</h4>
+      <h1>E.A.</h1>
+      <h4 class="subtitle">Welcome to Entrepreneurs Anonymous</h4>
+      <a ui-sref="main.why" ng-click="launch_form()" >Why does this exist?</a>
     </div>
   </header>
+
+  <div class="fixed top-right-corner">
+      <a ui-sref="main.submit" ng-hide="submit_form" ng-click="launch_form()" >Submit your Story</a>
+  </div>
+
+  <div class="pop-over" ng-show="submit_form" ng-hide="!submit_form">
+      <div class="fixed top-right-corner"><a class="cancel" ng-click="submit_form = false">X</a></div>
+
+      <div ui-view></div>
+  </div>
 
   <div class="stories">
     <div class="row" ng-repeat="story in active_stories | orderBy:'-submitted'">
