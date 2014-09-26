@@ -2,6 +2,14 @@
     margin: 20px 0;
 }
 
+p.block{
+        font-family: 'Vollkorn', serif;
+        font-size: 28px;
+        line-height: 41px;
+        color: #333;
+        color: $foreground-color;
+    }
+
 #banner {
     border-bottom: none;
     margin-top: -20px;
@@ -30,11 +38,13 @@
 
         .row {
             margin-top: 50px;
-            border-bottom: 1px #000 solid;
+            border-bottom: 1px #B0B0B0 solid;
         }
    }
 
-   
+   .meta {
+        margin-top: 25px;
+   }
 }
 
 .footer {
@@ -70,6 +80,17 @@ div.pop-over {
     border-left: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     transition: all, 3s;
+}
+
+div.pop-over-cover {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    opacity: 0.7;
+    z-index: 50;
 }
 
 form.story-form {

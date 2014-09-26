@@ -18,11 +18,14 @@
 
       <div ui-view></div>
   </div>
+  <div class="pop-over-cover" ng-show="submitForm" ng-hide="!submitForm" ng-click="closeForm()"></div>
 
   <div class="stories">
     <div class="row" ng-repeat="story in activeStories | orderBy:'-submitted'">
       <div class="story">
-        <p>{{story.body}}</p>
+        <p ng-class="{ block: story.body.length < 140 }">{{story.body}}</p>
+      </div>
+      <div class="meta">
         <label>{{story.submitted | date}}</label>
       </div>
     </div>

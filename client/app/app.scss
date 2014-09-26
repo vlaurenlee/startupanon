@@ -47,20 +47,16 @@ h1 {
 	line-height: 73px;
 }
 
+h4.subtitle {
+	line-height: 30px;
+}
+
 p {
 	font-family: 'Open Sans', sans-serif;
 	color: #333;
 	font-size: 16px;
-	line-height: 33px;
+	line-height: 25px;
 	color: $foreground-color;
-
-	.block{
-		font-family: 'Vollkorn', serif;
-		font-size: 39px;
-		line-height: 33px;
-		color: #333;
-		color: $foreground-color;
-	}
 }
 
 label {
