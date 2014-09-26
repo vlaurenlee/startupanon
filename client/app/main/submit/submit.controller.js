@@ -1,5 +1,7 @@
+'use strict';
+
 angular.module('eaApp')
-  .controller('SubmitCtrl', function ($scope, $http, $state, socket) {
+  .controller('SubmitCtrl', function ($scope, $http, $state) {
 
     $scope.newStory = '';
 
@@ -9,13 +11,13 @@ angular.module('eaApp')
         return;
       }
       $http.post('/api/stories', { body: $scope.newStory })
-        .success(function(res){
+        .success(function(){
           $scope.newStory = '';
           $state.go('main.thankyou');
         })
-        .error(function(err){
+        .error(function(){
           console.log('error in completion');
-          $scope.newStory.notification = "There was an error, please try submitting again."
+          $scope.newStory.notification = 'There was an error, please try submitting again.';
         });
     };
   });

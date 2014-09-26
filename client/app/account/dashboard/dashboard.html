@@ -2,7 +2,7 @@
 
 <div class="container">
  <!--<h1>Flagged Stories</h1>
-  <div class="row" ng-repeat="story in flagged_stories track by $index">
+  <div class="row" ng-repeat="story in flaggedStories track by $index">
     <div class="story">
       <p>{{story.body}}</p>
     </div>
@@ -17,7 +17,7 @@
   </div>-->
   <h1>Submitted Stories</h1>
   <div class="stories">
-    <div class="row" ng-repeat="story in submitted_stories | orderBy:'-submitted'">
+    <div class="row" ng-repeat="story in submittedStories | orderBy:'-submitted'">
       <div class="story">
         <label>{{story.submitted | date}}</label>
         <p>{{story.body}}</p>
